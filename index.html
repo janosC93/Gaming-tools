@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NextLevel Gaming</title>
+<link rel="stylesheet" href="style.css">
+<script src="config.js"></script>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png" height="40">
+<span>NextLevel Gaming</span>
+</div>
+
+<div class="lang">
+<button onclick="setLang('en')">EN</button>
+<button onclick="setLang('de')">DE</button>
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1 data-en="Upgrade Your Gaming Performance"
+data-de="Verbessere deine Gaming Performance">
+Upgrade Your Gaming Performance
+</h1>
+
+<p data-en="High quality tools for gamers, streamers and game developers."
+data-de="Hochwertige Tools für Gamer, Streamer und Game Entwickler.">
+High quality tools for gamers, streamers and game developers.
+</p>
+
+<a class="cta" href="#products"
+data-en="View Products"
+data-de="Produkte ansehen">
+View Products
+</a>
+
+</section>
+
+
+<section id="products">
+
+<div class="product">
+
+<h2>FPS Pro Mechanics System</h2>
+
+<p data-en="Professional training system to improve aim, movement and decision making in FPS games."
+data-de="Professionelles Trainingssystem zur Verbesserung von Aim, Movement und Entscheidungen in FPS Spielen.">
+Professional training system
+</p>
+
+<ul>
+<li>30 Day Training Program</li>
+<li>Aim Drills</li>
+<li>Game Sense Strategy</li>
+</ul>
+
+<a class="buy" href="#" onclick="buyProduct('fps')">Buy – 39€</a>
+
+</div>
+
+
+<div class="product">
+
+<h2>Ultimate Stream Overlay Pack</h2>
+
+<p data-en="High quality stream overlays for Twitch and YouTube."
+data-de="Hochwertige Stream Overlays für Twitch und YouTube.">
+Stream overlays
+</p>
+
+<ul>
+<li>Starting Soon</li>
+<li>Be Right Back</li>
+<li>Stream Ending</li>
+</ul>
+
+<a class="buy" href="#" onclick="buyProduct('overlay')">Buy – 29€</a>
+
+</div>
+
+
+<div class="product">
+
+<h2>Game UI Asset Pack</h2>
+
+<p data-en="UI icons for indie game developers."
+data-de="UI Icons für Indie Game Entwickler.">
+Game UI icons
+</p>
+
+<ul>
+<li>Health icons</li>
+<li>Shield icons</li>
+<li>Coin icons</li>
+</ul>
+
+<a class="buy" href="#" onclick="buyProduct('assets')">Buy – 49€</a>
+
+</div>
+
+</section>
+
+
+<section class="trust">
+
+<h2 data-en="Why gamers trust us"
+data-de="Warum Gamer uns vertrauen">
+Why gamers trust us
+</h2>
+
+<ul>
+<li data-en="Instant download after purchase"
+data-de="Sofortiger Download nach dem Kauf">Instant download</li>
+
+<li data-en="No subscription"
+data-de="Kein Abo Modell">No subscription</li>
+
+<li data-en="High quality products"
+data-de="Hochwertige Produkte">High quality</li>
+</ul>
+
+</section>
+
+
+<section class="faq">
+
+<h2>FAQ</h2>
+
+<p><b>When do I receive the product?</b><br>
+Instant download after purchase.</p>
+
+<p><b>Is this a subscription?</b><br>
+No. One time payment.</p>
+
+<p><b>What do I need to use the products?</b><br>
+OBS for overlays. Game engines like Unity or Unreal for assets.</p>
+
+</section>
+
+
+<footer>
+
+<p>© NextLevel Gaming</p>
+
+</footer>
+
+
+<script src="lang.js"></script>
+
+<script>
+
+function buyProduct(product){
+
+let link = ""
+
+if(product === "fps") link = STORE.fps_link
+if(product === "overlay") link = STORE.overlay_link
+if(product === "assets") link = STORE.assets_link
+
+window.open(link)
+
+}
+
+</script>
+
+</body>
+</html>
